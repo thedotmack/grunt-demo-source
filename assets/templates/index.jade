@@ -6,7 +6,11 @@ html(lang="en")
 		script(type="text/javascript" src="assets/js/main.min.js")
 	body
 		.container
+			
+			// Template tag for markdown content
 			.content <%=content%>
+
+			// Loop for JSON pictures
 			each picture, index in pictures
 				.picture
 					img(src="#{picture.source}")
