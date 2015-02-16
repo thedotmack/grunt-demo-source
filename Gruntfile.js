@@ -73,7 +73,17 @@ module.exports = function(grunt) {
 			      "index.html": "assets/templates/index.jade",
 			    }
 			}
-		},              
+		},
+		markdown: {
+			all: {
+				files: {
+			      "index.html": "assets/data/content.md",
+			    },
+				options: {
+					template: 'index.html'
+				}
+			}
+		},
 		watch: {
 			js: {
 				files: [ 'assets/js/*.js' ],
@@ -93,9 +103,13 @@ module.exports = function(grunt) {
 				files: [ 'assets/images/*.png' ],
 				tasks: [ 'tinypng' ]
 			},
-			png: {
-				files: [ 'assets/templates/*.jade' ],
-				tasks: [ 'jade' ],
+			data: {
+				files: [ 
+					'assets/templates/*.jade', 
+					'assets/data/*.json', 
+					'assets/data/*.md' 
+				],
+				tasks: [ 'jade', 'markdown' ],
 				options: {
 					livereload: true,
 				}				
@@ -111,7 +125,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-tinypng');
-	grunt.loadNpmTasks('grunt-contrib-jade');	
+	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-markdown');
 
 	// Default task.
 	grunt.registerTask('serve', ['connect','watch']);
