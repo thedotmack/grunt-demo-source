@@ -1,0 +1,29 @@
+@font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@primary-color: yellow;
+@secondary-color: black;
+
+body {
+	background: lighten(@primary-color, 30%);
+	color: @secondary-color;
+	font-family: @font-family;
+	font-size: 18px;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	h1 {
+		text-align: center;
+	}
+	.picture {
+		background: lighten(@primary-color, 40%);
+		border: solid 1px darken(@primary-color, 5%);
+		padding: 30px;
+		margin-bottom: 30px;
+		overflow: hidden; // quick clearfix
+		img {
+			float: left;
+			margin-right: 30px;
+		}
+	}
+}
