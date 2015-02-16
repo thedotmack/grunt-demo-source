@@ -11,12 +11,6 @@ module.exports = function(grunt) {
 			}
 	    },
         uglify: {
-            options: {
-                mangle: true,
-                compress: true,
-                preserveComments: 'some',
-                sourceMap: true,
-            },
             js: {
                 files: {
                     'assets/js/main.min.js': 'assets/js/main.js'
@@ -24,12 +18,6 @@ module.exports = function(grunt) {
             }
         },	    
 		less: {
-			options: {
-				compress: true,
-				yuicompress: true,
-				optimization: 2,
-				sourceMap: true
-			},
 			style: {
 				files: {
 					'assets/css/main.min.css': 'assets/less/main.less'
@@ -37,9 +25,6 @@ module.exports = function(grunt) {
 			}
 		},
 		autoprefixer: {
-			options: {
-				map: true,
-			},
 			main: {
 				src: 'assets/css/main.min.css',
 			},
@@ -70,7 +55,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			js: {
-				files: [ 'assets/js/*.js' ],
+				files: [ 'assets/js/main.js' ],
 				tasks: [ 'uglify:js' ],
 				options: {
 					livereload: true,
@@ -100,7 +85,6 @@ module.exports = function(grunt) {
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');	
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-autoprefixer');

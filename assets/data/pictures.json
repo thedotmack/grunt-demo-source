@@ -1,14 +1,14 @@
 {
 	"Photo Title 1": {
-		"source": "http://placecage.com/200/300",
+		"source": "http://placecage.com/200/200",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 	},
 	"Photo Title 2": {
-		"source": "http://fillmurray.com/200/300",
+		"source": "http://fillmurray.com/200/200",
 		"description": " Perspiciatis quasi velit sequi fuga voluptatum assumenda quae."
 	},
 	"Photo Title 3": {
-		"source": "http://stevensegallery.com/200/300",
+		"source": "http://stevensegallery.com/200/200",
 		"description": "Adipisci molestias sit omnis obcaecati animi cupiditate et."
 	}
 }
