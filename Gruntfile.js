@@ -10,6 +10,19 @@ module.exports = function(grunt) {
 				}
 			}
 	    },
+        uglify: {
+            options: {
+                mangle: true,
+                compress: true,
+                preserveComments: 'some',
+                sourceMap: true,
+            },
+            js: {
+                files: {
+                    'assets/js/main.min.js': 'assets/js/main.js'
+                }
+            }
+        },	    
 		less: {
 			options: {
 				compress: true,
@@ -31,35 +44,6 @@ module.exports = function(grunt) {
 				src: 'assets/css/main.min.css',
 			},
 		},
-        // To use TinyPNG, get an API key from https://tinypng.com/developers
-        tinypng: {
-        	options: {
-        		apiKey: 'YOUR_API_KEY_HERE',
-        		checkSigs: true,
-        		sigFile: 'assets/images/file_sigs.json',
-        		summarize: true,
-        		showProgress: true
-        	},
-        	compress: {
-        		src: '*.png',
-        		cwd: 'assets/images/',
-        		dest: 'assets/images/',
-        		expand: true
-        	}
-        },
-        uglify: {
-            options: {
-                mangle: true,
-                compress: true,
-                preserveComments: 'some',
-                sourceMap: true,
-            },
-            js: {
-                files: {
-                    'assets/js/main.min.js': ['assets/js/main.js']
-                }
-            }
-        },
 		jade: {
 			dist: {
 			    options: {
@@ -87,7 +71,7 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: [ 'assets/js/*.js' ],
-				tasks: [ 'uglify:js', 'jshint:all' ],
+				tasks: [ 'uglify:js' ],
 				options: {
 					livereload: true,
 				}
@@ -124,7 +108,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');	
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-tinypng');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-markdown');
 
