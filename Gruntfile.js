@@ -46,23 +46,23 @@ module.exports = function(grunt) {
 		},
 		jade: {
 			dist: {
-			    options: {
+				options: {
 					data: function() {
 						return {
 							pictures: require( __dirname + '/assets/data/pictures.json')
 						}
 					}
-			    },
-			    files: {
-			      "index.html": "assets/templates/index.jade",
-			    }
+				},
+				files: {
+					"index.html": "assets/templates/index.jade",
+				}
 			}
 		},
 		markdown: {
 			all: {
 				files: {
-			      "index.html": "assets/data/content.md",
-			    },
+					"index.html": "assets/data/content.md",
+				},
 				options: {
 					template: 'index.html'
 				}
@@ -82,10 +82,6 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true,
 				}
-			},
-			png: {
-				files: [ 'assets/images/*.png' ],
-				tasks: [ 'tinypng' ]
 			},
 			data: {
 				files: [ 
