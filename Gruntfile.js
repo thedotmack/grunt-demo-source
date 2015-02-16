@@ -108,6 +108,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-markdown');
 
 	// Default task.
-	grunt.registerTask('serve', ['connect','watch']);
+	grunt.registerTask('serve', [
+		'uglify:js',
+		'less:style',
+		'autoprefixer:main',
+		'jade',
+		'markdown',
+		'connect',
+		'watch'
+	]);
 
 };
