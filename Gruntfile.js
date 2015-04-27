@@ -40,16 +40,29 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"index.html": "assets/templates/index.jade",
+					"blog-post.html": "assets/templates/blog-post.jade"
 				}
 			}
 		},
 		markdown: {
-			all: {
+			home: {
 				files: {
-					"index.html": "assets/data/content.md",
+					"index.html": "assets/data/content.md"					
 				},
 				options: {
 					template: 'index.html'
+				}
+			},
+			blog: {
+				files: [{
+					expand: true,
+					cwd: 'assets/data/blog-posts/',
+					src: '*.md',
+					dest: 'blog-posts/',
+					ext: '.html'
+		        }],
+				options: {
+					template: 'blog-post.html'
 				}
 			}
 		},
@@ -72,7 +85,7 @@ module.exports = function(grunt) {
 				files: [ 
 					'assets/templates/*.jade', 
 					'assets/data/*.json', 
-					'assets/data/*.md' 
+					'assets/data/**/*.md' 
 				],
 				tasks: [ 'jade', 'markdown' ],
 				options: {
