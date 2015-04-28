@@ -1,5 +1,5 @@
 body {
-  background: #ffff99;
+  background: #ffdb99;
   color: black;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -12,8 +12,8 @@ body {
   text-align: center;
 }
 .container .post {
-  background: #ffffcc;
-  border: solid 1px #e5e600;
+  background: #ffedcc;
+  border: solid 1px #e69500;
   padding: 30px;
   margin-bottom: 30px;
   overflow: hidden;

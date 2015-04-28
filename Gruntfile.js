@@ -67,38 +67,38 @@ module.exports = function(grunt) {
 		// 	}
 		// },
 		watch: {
-			// js: {
-			// 	files: [ 'assets/js/main.js' ],
-			// 	tasks: [ 'uglify:js' ],
-			// 	options: {
-			// 		livereload: true,
-			// 	}
-			// },
-			// css: {
-			// 	files: [ 'assets/less/*.less' ],
-			// 	tasks: [ 'less:style', 'autoprefixer:main' ],
-			// 	options: {
-			// 		livereload: true,
-			// 	}
-			// },
-			// data: {
-			// 	files: [ 
-			// 		'assets/templates/**/*.jade', 
-			// 		'assets/data/**/*.json', 
-			// 		'assets/data/**/*.md' 
-			// 	],
-			// 	tasks: [ 'jade', 'markdown' ],
-			// 	options: {
-			// 		livereload: true,
-			// 	}				
-			// }
+		// 	js: {
+		// 		files: [ 'assets/js/main.js' ],
+		// 		tasks: [ 'uglify:js' ],
+		// 		options: {
+		// 			livereload: true,
+		// 		}
+		// 	},
+		// 	css: {
+		// 		files: [ 'assets/less/*.less' ],
+		// 		tasks: [ 'less:style', 'autoprefixer:main' ],
+		// 		options: {
+		// 			livereload: true,
+		// 		}
+		// 	},
+		// 	data: {
+		// 		files: [ 
+		// 			'assets/templates/**/*.jade', 
+		// 			'assets/data/**/*.json', 
+		// 			'assets/data/**/*.md' 
+		// 		],
+		// 		tasks: [ 'jade', 'markdown' ],
+		// 		options: {
+		// 			livereload: true,
+		// 		}
+		// 	}
 		}
     });
 
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
- 	// grunt.loadNpmTasks('grunt-contrib-uglify');	
+	// grunt.loadNpmTasks('grunt-contrib-uglify');	
 	// grunt.loadNpmTasks('grunt-contrib-less');
 	// grunt.loadNpmTasks('grunt-autoprefixer');
 	// grunt.loadNpmTasks('grunt-contrib-jade');
