@@ -11,16 +11,29 @@ body {
 
 .container {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 0 auto 100px auto;
 	h1 {
 		text-align: center;
 	}
-	.picture {
+	.post {
 		background: lighten(@primary-color, 40%);
 		border: solid 1px darken(@primary-color, 5%);
 		padding: 30px;
 		margin-bottom: 30px;
 		overflow: hidden; // quick clearfix
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		
+		// Will autoprefix!
+		transition: all 0.15s ease;
+
+		&:hover {
+			background: lighten(@primary-color, 60%);
+
+			// Will autoprefix!
+			transform: scale(1.05);
+		}
 		img {
 			float: left;
 			margin-right: 30px;

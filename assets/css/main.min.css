@@ -6,19 +6,30 @@ body {
 }
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
 }
 .container h1 {
   text-align: center;
 }
-.container .picture {
+.container .post {
   background: #ffffcc;
   border: solid 1px #e5e600;
   padding: 30px;
   margin-bottom: 30px;
   overflow: hidden;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+          transition: all 0.15s ease;
 }
-.container .picture img {
+.container .post:hover {
+  background: #ffffff;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.container .post img {
   float: left;
   margin-right: 30px;
 }

@@ -11,8 +11,8 @@ html(lang="en")
 			.content <%=content%>
 
 			// Loop for JSON pictures
-			each picture, index in pictures
-				.picture
-					img(src="#{picture.source}")
+			each post, index in blog_posts
+				a.post(href="blog-posts/#{post.filename}.html")
+					img(src="#{post.source}")
 					h2 #{index}
-					p #{picture.description}
+					p #{post.description}

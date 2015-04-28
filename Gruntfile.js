@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 				options: {
 					data: function() {
 						return {
-							pictures: require( __dirname + '/assets/data/pictures.json')
+							blog_posts: require( __dirname + '/assets/data/blog-posts.json')
 						}
 					}
 				},
@@ -83,8 +83,8 @@ module.exports = function(grunt) {
 			},
 			data: {
 				files: [ 
-					'assets/templates/*.jade', 
-					'assets/data/*.json', 
+					'assets/templates/**/*.jade', 
+					'assets/data/**/*.json', 
 					'assets/data/**/*.md' 
 				],
 				tasks: [ 'jade', 'markdown' ],
@@ -104,7 +104,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-markdown');
 
-	// Default task.
 	grunt.registerTask('serve', [
 		'uglify:js',
 		'less:style',
@@ -114,5 +113,8 @@ module.exports = function(grunt) {
 		'connect',
 		'watch'
 	]);
+	
+	// Default task.
+	grunt.registerTask('default', 'serve');
 
 };
